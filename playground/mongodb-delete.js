@@ -20,17 +20,17 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     // });
 
     //findOneAndDelete
-    // db.collection('Todos').findOneAndDelete({text: 'delete'}).then((result) => {
-    //     console.log(result);
-    // });
+    db.collection('Todos').findOneAndDelete({text: 'delete'}).then((result) => {
+        console.log(result);
+    });
 
     //db.collection('Users').deleteMany({name: 'Andrew'});
 
-    db.collection('Users').findOneAndDelete({
-        _id: new ObjectID("5a83b8bbceb35b0f3aa018fe")
-    }).then((results) => {
-        console.log(JSON.stringify(results, undefined, 2));
-    });
+    // db.collection('Users').findOneAndDelete({
+    //     _id: new ObjectID("5a83b8bbceb35b0f3aa018fe")
+    // }).then((results) => {
+    //     console.log(JSON.stringify(results, undefined, 2));
+    // });
 
     // db.close();
 
